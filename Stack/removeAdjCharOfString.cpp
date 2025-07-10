@@ -4,7 +4,7 @@ using namespace std;
 
 string removeAdjacent(string &str, stack<char> &st){
     for(char ch:str){
-        if(st.empty()){
+        if(st.empty()){  
             st.push(ch);
         }else if(ch==st.top()){
             st.pop();

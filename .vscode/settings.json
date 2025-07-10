@@ -5,6 +5,18 @@
         "string": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "string_view": "cpp",
+        "limits": "cpp",
+        "algorithm": "cpp"
     }
 }

@@ -51,7 +51,7 @@ int main (){
     int arr[6]={2, 1, 7, 4, 3, 5};
     vector<int> ans(6);
     stack<int>st;
-    for(int i=0; i<6; i++){
+    for(int i=0; i<6; i++){          
         while(!st.empty() && arr[i]> arr[st.top()]){
             int x = st.top();
             st.pop();

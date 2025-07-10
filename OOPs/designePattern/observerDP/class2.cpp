@@ -1,5 +1,5 @@
-
-
+#include<bits/stdc++.h>
+using namespace std;
 
 class IObserver{
     public: 
@@ -8,14 +8,14 @@ class IObserver{
 };
 
 
-class watcher {
+class watcher :public IObserver {
     public:
     explicit watcher(const string& name):mName(name){}
-    void OnNotify override (){
+    void OnNotify  ()override{
         cout<<"watcher-"<< mName<<endl;
     }
 
-    private 
+    private:
     string mName;
 };
 
@@ -37,7 +37,7 @@ class ISubject {
       }
 
       private:
-      forward_list<Observer*>mObservers;
+      forward_list<IObserver*>mObservers;
 };
 
 
@@ -56,8 +56,9 @@ int main (){
     Subject.AddObserver(&watcher2);
     Subject.AddObserver(&watcher3);
     Subject.NotifyAll();
-    Subject.RemoveObserver(&watcher3)
-    cout<<end;
+    Subject.RemoveObserver(&watcher3);
+    cout<<endl;
     Subject.NotifyAll();
     return 0;
 }
+  
