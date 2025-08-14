@@ -1,14 +1,16 @@
-#include "bits/stdc++.h"
+#include <iostream>
+#include <vector>
+#include <set>
 using namespace std;
 
 void dfs(int node, int parent, vector<vector<int>> &adj, set<pair<int,int>> &edges, int &reversals, vector<bool> &visited) {
     visited[node] = true;
-    for (int nei : adj[node]) {
-        if (nei == parent) continue;
-        if (!visited[nei]) {
-            if (edges.find({node, nei}) == edges.end())
+    for (int nbr : adj[node]) {
+        if (nbr == parent) continue;
+        if (!visited[nbr]) {
+            if (edges.find({node, nbr}) == edges.end())
                 reversals++;
-            dfs(nei, node, adj, edges, reversals, visited);
+            dfs(nbr, node, adj, edges, reversals, visited);
         }
     }
 }
