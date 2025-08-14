@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <set>
+#include <bits/stdc++.h">
 using namespace std;
 
 void dfs(int node, int parent, vector<vector<int>> &adj, set<pair<int,int>> &edges, int &reversals, vector<bool> &visited) {
